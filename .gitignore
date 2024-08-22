@@ -163,4 +163,5 @@ cython_debug/
 
 bias
 dark
+flat
 imgs
