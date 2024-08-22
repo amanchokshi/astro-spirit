@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Explore a range of exposure and gain settings on the raspberry pi camera v2
+
+# The max digital gain on the imx219 sensor seems to be x8, beyond which some
+# sort of digital gain seems to kick in - which will not improve anything
+
+# Due to a jetson nano NVIDIA driver issue, the current max exposure on
+# SpIRIT is 0.358s, despite the max exposure of the imx219 sensor being
+# 11.76s. We explore both in case the driver on SpIRIT can be modified.
+
 FRAMES=24
 GAINS=(1 4 8)
 EXPOSURES=(358000 11760000)
